@@ -14,8 +14,8 @@ class R {
 	}
 	
 	public boolean equals(Object obj) {
-		if (obj instanceof R) {
-			R r = (R)obj;
+		if (obj instanceof R2) {
+			R2 r = (R2)obj;
 			if(r.count == this.count) {
 				return true;
 			}
@@ -33,27 +33,27 @@ public class TestHashSet2 {
 	public static void main(String[] args) {
 
 		HashSet hs = new HashSet();
-		hs.add(new R(5));
-		hs.add(new R(-3));
-		hs.add(new R(9));
-		hs.add(new R(-2));
+		hs.add(new R2(5));
+		hs.add(new R2(-3));
+		hs.add(new R2(9));
+		hs.add(new R2(-2));
 		//打印HashSet集合，集合元素没有重复
 		System.out.println(hs);
 		//取出第一个元素
 		Iterator it = hs.iterator();
-		R first = (R)it.next();
+		R2 first = (R2)it.next();
 		//为第一个元素的count属性赋值
 		first.count = -3;
 		//再次输出HashSet集合，集合元素有重复元素
 		System.out.println(hs);
 		//删除count为－3的R对象
-		hs.remove(new R(-3));
+		hs.remove(new R2(-3));
 		//可以看到被删除了一个R元素
 		System.out.println(hs);
 		
-		System.out.println("hs是否包含count为-3的R对象？" + hs.contains(new R(-3)));
+		System.out.println("hs是否包含count为-3的R对象？" + hs.contains(new R2(-3)));
 		
-		System.out.println("hs是否包含count为-2的对象？" + hs.contains(new R(-2)));
+		System.out.println("hs是否包含count为-2的对象？" + hs.contains(new R2(-2)));
 		
 		
 		HashSet hs2 = new HashSet();
