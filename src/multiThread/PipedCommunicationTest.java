@@ -66,6 +66,8 @@ class WriterThread extends Thread {
 public class PipedCommunicationTest {
 
 	public static void main(String[] args) {
+		System.out.println(Thread.currentThread().getThreadGroup());
+		System.out.println(Thread.currentThread().isDaemon());
 		PipedWriter pw = null;
 		PipedReader pr = null;
 		try {
