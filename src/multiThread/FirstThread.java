@@ -3,6 +3,7 @@ package multiThread;
 public class FirstThread extends Thread {
 	private int i;
 	
+	@Override
 	public void run() {
 		for (; i < 10 ; i++) {
 			System.out.println(getName() + " " + i);

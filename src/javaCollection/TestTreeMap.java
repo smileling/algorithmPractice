@@ -10,10 +10,12 @@ class R2 implements Comparable {
 		this.count = count;
 	}
 	
+	@Override
 	public String toString() {
 		return "R(count属性：" +count+")";
 	}
 	
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
 			return true;
@@ -27,6 +29,7 @@ class R2 implements Comparable {
 		return false;
 	}
 	
+	@Override
 	public int compareTo(Object obj) {
 		R2 r = (R2)obj;
 		if (this.count  > r.count) {

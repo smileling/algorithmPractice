@@ -14,6 +14,7 @@ public class DrawThread extends Thread {
 //		this.drawAmount = drawAmount;
 //	}
 	
+	@Override
 	public void run() {
 		for (; i < 6; i++) {
 			account.draw(drawAmount);

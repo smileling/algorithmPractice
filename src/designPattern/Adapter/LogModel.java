@@ -32,6 +32,7 @@ public class LogModel implements java.io.Serializable{
 		this.logContent = logContent;
 	}
 	
+	@Override
 	public String toString() {
 		return "logId=" + logId + ", operateUser=" + operateUser + ", operateTime" + operateTime +
 				", logContent=" + logContent;

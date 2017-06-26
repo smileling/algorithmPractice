@@ -26,10 +26,12 @@ class Final {
 class Final2 extends Final {
 	public int ff2 = 2;
 		
+	@Override
 	public void print2() {
 		System.out.println("This is Final2.print2, ff = " + ff);
 	}
 	
+	@Override
 	protected void protectedFun() {
 		System.out.println("Final.protectedFun");
 	}
@@ -39,10 +41,12 @@ class Final3 extends Final2 {
 	public int ff3 = 3;
 	public int ff = 111;
 	
+	@Override
 	protected void protectedFun() {
 		System.out.println("Final3.protectedFun");
 	}
 	
+	@Override
 	public void print2() {
 		System.out.println("This is Final3.print2, ff = " + ff);
 	}
@@ -98,8 +102,8 @@ public class FinalTest {
 		FinalTest ft = new FinalTest(2);
 		System.out.println(ft.A);
 		System.out.println(ft.B);
-		System.out.println(ft.C);
-		System.out.println(ft.D);
+		System.out.println(FinalTest.C);
+		System.out.println(FinalTest.D);
 		System.out.println(FinalTest.C);
 		System.out.println(FinalTest.D);
 		System.out.println(ft.E);

@@ -9,6 +9,7 @@ class M {
 		this.age = age;
 	}
 	
+	@Override
 	public String toString() {
 		return "M对象(age:" + age+ ")";
 	}
@@ -18,6 +19,7 @@ public class TestTreeSet3 {
 	public static void main(String[] args) {
 
 		TreeSet ts = new TreeSet(new Comparator() {
+			@Override
 			public int compare(Object o1, Object o2) {
 				M m1 = (M)o1;
 				M m2 = (M)o2;

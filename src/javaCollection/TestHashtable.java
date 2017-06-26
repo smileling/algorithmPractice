@@ -8,6 +8,7 @@ class AA {
 		this.count = count;
 	}
 	
+	@Override
 	public boolean equals(Object obj) {
 		if (obj == this) {
 			return true;
@@ -21,11 +22,13 @@ class AA {
 		return false;
 	}
 	
+	@Override
 	public int hashCode() {
 		return this.count;
 	}
 }
 class B {
+	@Override
 	public boolean equals(Object obj) {
 		return true;
 	}

@@ -8,6 +8,7 @@ public class TestTreeMap2 {
 	public static void main(String[] args) {
 
 		TreeMap tm = new TreeMap(new Comparator() {
+			@Override
 			public int compare(Object o1, Object o2) {
 			int a = (int)o1;
 			int b = (int)o2;

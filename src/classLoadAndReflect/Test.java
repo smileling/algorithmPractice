@@ -1,6 +1,5 @@
-package Test;
+package classLoadAndReflect;
 
-import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -51,28 +50,36 @@ public class Test {
 //	}
 		
 		System.out.println(Test.class);
-		System.out.println(Class.forName("Test.Test"));
+		System.out.println(Class.forName("classLoadAndReflect.Test"));
 		Test t = new Test(3);
 		System.out.println(t.getClass());
 		
 		
 		Test t2 = Test.class.newInstance();
-		Test t3 = (Test)Class.forName("Test.Test").newInstance();
+		Test t3 = (Test)Class.forName("classLoadAndReflect.Test").newInstance();
 		Test t4 = t.getClass().newInstance();
 		System.out.println(t);
 		System.out.println(t2);
 		System.out.println(t3);
 		System.out.println(t4);
 		
-		Constructor t5 = Class.forName("Test.Test").getConstructor(Integer.class);
-		Object obj = t5.newInstance(2);
+//		System.out.println(Class.forName("classLoadAndReflect.Test").getConstructors().length);
+//		System.out.println(Class.forName("classLoadAndReflect.Test").getMethods().length);
+		int len = Class.forName("classLoadAndReflect.Test").getConstructors().length;
+		for (int i = 0; i < len; i++) {
+//			System.out.println(Class.forName("classLoadAndReflect.Test").getMethods()[i]);
+			System.out.println(Class.forName("classLoadAndReflect.Test").getConstructors()[i]);
+		}
+		Constructor t5 = Class.forName("classLoadAndReflect.Test").getConstructor(Integer.class);
+		Test obj = (Test)t5.newInstance(2);
 		
-		HashSet<Integer> hs = new HashSet<Integer>();
-		hs.add(null);
-		List<Integer> list = new ArrayList<Integer>();
-		list.add(null);
-		System.out.println(list.get(0));
-		System.out.println(list.contains(null));
+//		HashSet<Integer> hs = new HashSet<Integer>();
+//		hs.add(null);
+//		List<Integer> list = new ArrayList<Integer>();
+//		list.add(null);
+//		System.out.println(list);
+//		System.out.println(list.get(0));
+//		System.out.println(list.contains(null));
 	}
 		
 

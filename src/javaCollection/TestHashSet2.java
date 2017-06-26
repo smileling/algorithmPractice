@@ -9,10 +9,12 @@ class R {
 		this.count = count;
 	}
 	
+	@Override
 	public String toString() {
 		return "R(count 属性：" + count + ")";
 	}
 	
+	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof R2) {
 			R2 r = (R2)obj;
@@ -23,6 +25,7 @@ class R {
 		return false;
 	}
 	
+	@Override
 	public int hashCode() {
 		return this.count;
 	}

@@ -12,6 +12,7 @@ class ReaderThread extends Thread {
 		this.pr = pr;
 		this.br = new BufferedReader(pr);
 	}
+	@Override
 	public void run() {
 		String buf = null;
 		try {
@@ -44,6 +45,7 @@ class WriterThread extends Thread {
 	public WriterThread(PipedWriter pw) {
 		this.pw = pw;
 	}
+	@Override
 	public void run() {
 		try {
 			for (int i = 0; i < books.length; i++) {

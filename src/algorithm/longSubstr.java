@@ -1,7 +1,5 @@
 package algorithm;
 
-import java.util.ArrayList;
-
 public class longSubstr {
 
 	//method 1

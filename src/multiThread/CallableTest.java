@@ -4,6 +4,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 class RtnThread implements Callable<Integer> {
+	@Override
 	public Integer call() {
 		int i = 0; 
 		for (; i < 100; i++) {

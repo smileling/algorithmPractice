@@ -19,6 +19,7 @@ public class LogFileOperate implements LogFileOperateApi {
 		System.out.println("logFilePathName=" + logFilePathName);
 	}
 	
+	@Override
 	public List<LogModel> readeLogFile() {
 		List<LogModel> list = null;
 		ObjectInputStream oin = null;
@@ -44,6 +45,7 @@ public class LogFileOperate implements LogFileOperateApi {
 		return list;
 	}
 	
+	@Override
 	public void writeLogFile(List<LogModel> list) {
 		File f = new File(logFilePathName);
 		ObjectOutputStream oout = null;

@@ -1,6 +1,5 @@
 package javaCollection;
 
-import java.util.Hashtable;
 import java.util.LinkedHashMap;
 
 public class TestLinkedHashMap {

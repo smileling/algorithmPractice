@@ -21,6 +21,7 @@ public class TestSort {
 		Collections.shuffle(nums);
 		System.out.println(nums);
 		Collections.sort(nums, new Comparator() {
+			@Override
 			public int compare(Object o1, Object o2) {
 			int a = (int)o1;
 			int b = (int)o2;
